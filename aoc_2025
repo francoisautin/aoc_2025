@@ -1,0 +1,30 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use App\App;
+
+(static function(): void
+{
+    if (PHP_VERSION_ID < 80300) {
+        fwrite(STDERR, 'This PHP program is set to run on PHP >=8.5');
+        fwrite(STDERR, 'Update PHP to run this program');
+        exit(1);
+    }
+})();
+
+// Loading dependencies via composer autoloader
+(static function(): void
+{
+    $autoloadPath = __DIR__.'/vendor/autoload.php';
+    if (!file_exists($autoloadPath)) {
+        throw new RuntimeException('Unable to find autoload file. Did you run composer install?');
+    }
+
+    require_once $autoloadPath;
+}
+)();
+
+$application = new App();
+$application->run();

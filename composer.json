@@ -1,0 +1,41 @@
+{
+  "name": "francoisautin/aoc_2025",
+  "description": "Advent of code 2025 answers written in PHP",
+  "keywords": [
+    "Advent",
+    "Code",
+    "2025",
+    "PHP"
+  ],
+  "type": "application",
+  "authors": [
+    {
+      "name": "François AUTIN",
+      "role": "Author"
+    }
+  ],
+  "version": "dev-1",
+  "license": [
+    "Apache-2.0"
+  ],
+  "require": {
+    "php": "^8.5"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^v3",
+    "phpstan/phpstan": "^2",
+    "jetbrains/phpstorm-attributes": "^1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "scripts": {
+    "phpstan": "@php vendor/bin/phpstan analyze src -l 3",
+    "cs": "@php vendor/bin/php-cs-fixer fix ."
+  },
+  "bin": [
+    "aoc_2023"
+  ]
+}
