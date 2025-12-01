@@ -90,11 +90,11 @@ final class App
             =================================
             Usage:
               ./aoc_2025 [parameters] [space separated list of days]
-              Valid days are 1 through 25
+              Valid days are 1 through 12
 
             Parameters:
               -h | --help: Print this help screen
-              -a | --all: Run all 25 challenges
+              -a | --all: Run all 12 challenges
 
 
             EOD;
