@@ -32,7 +32,7 @@
     }
   },
   "scripts": {
-    "phpstan": "@php vendor/bin/phpstan analyze src -l 3",
+    "phpstan": "@php vendor/bin/phpstan analyze src -l 7",
     "cs": "@php vendor/bin/php-cs-fixer fix ."
   },
   "bin": [

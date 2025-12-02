@@ -7,7 +7,7 @@ use App\App;
 
 (static function(): void
 {
-    if (PHP_VERSION_ID < 80300) {
+    if (PHP_VERSION_ID < 80500) {
         fwrite(STDERR, 'This PHP program is set to run on PHP >=8.5');
         fwrite(STDERR, 'Update PHP to run this program');
         exit(1);
