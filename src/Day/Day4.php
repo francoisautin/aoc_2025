@@ -107,6 +107,9 @@ class Day4 extends DayAbstract
         ];
     }
 
+    /**
+     * @param string[][] $grid
+     */
     private static function countNeighbours(array $grid, int $y, int $x): int
     {
         $neighbours = 0;

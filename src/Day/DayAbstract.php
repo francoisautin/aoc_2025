@@ -28,11 +28,15 @@ abstract class DayAbstract
         if (null === $this->input) {
             return 'Failed to load input file.';
         } else {
+            $start = microtime(true);
             $resultPartOne = $this->part1();
+            $timeElapsedPartOne = number_format(microtime(true) - $start, 4);
+            $start = microtime(true);
             $resultPartTwo = $this->part2();
+            $timeElapsedPartTwo = number_format(microtime(true) - $start, 4);
             return <<<EOD
-                Part 1: $resultPartOne
-                Part 2: $resultPartTwo
+                Part 1: $resultPartOne in $timeElapsedPartOne seconds
+                Part 2: $resultPartTwo in $timeElapsedPartTwo seconds
                 EOD;
         }
     }
